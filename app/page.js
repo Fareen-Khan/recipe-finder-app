@@ -9,10 +9,11 @@ export default async function Home({ searchParams }) {
   let data = []
   try {
     const file = await fs.readFile(
-      process.cwd() + "/public/json/recipes.json",
+      process.cwd() + "/json/recipes.json",
       "utf8"
     );
     data = JSON.parse(file);
+    console.log("Data loaded successfully:", data);
   } catch (e) {
     console.log("Error occured fethcing data:", e);
   }
