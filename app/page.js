@@ -4,13 +4,18 @@ import Loading from "./loading";
 import { promises as fs } from "fs";
 import Search from "@/components/search";
 
-export default async function Home({searchParams}) {
+export default async function Home({ searchParams }) {
   const pageParams = { page: 1, perPage: 30 };
-  const file = await fs.readFile(
-    process.cwd() + "/public/json/recipes.json",
-    "utf8"
-  );
-  const data = JSON.parse(file);
+  let data = []
+  try {
+    const file = await fs.readFile(
+      process.cwd() + "/public/json/recipes.json",
+      "utf8"
+    );
+    data = JSON.parse(file);
+  } catch (e) {
+    console.log("Error occured fethcing data:", e);
+  }
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-sans text-sm">
