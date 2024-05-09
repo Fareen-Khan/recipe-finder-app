@@ -2,21 +2,13 @@ import React, { Suspense } from "react";
 import RecipeGrid from "../components/RecipeGrid";
 import Loading from "./loading";
 import { promises as fs } from "fs";
+import recipesData from "../public/json/recipes.json";
 import Search from "@/components/search";
 
 export default async function Home({ searchParams }) {
   const pageParams = { page: 1, perPage: 30 };
-  let data = []
-  try {
-    const file = await fs.readFile(
-      process.cwd() + "/json/recipes.json",
-      "utf8"
-    );
-    data = JSON.parse(file);
-    console.log("Data loaded successfully:", data);
-  } catch (e) {
-    console.log("Error occured fethcing data:", e);
-  }
+  const data = recipesData; 
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-sans text-sm">
