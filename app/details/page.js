@@ -7,8 +7,8 @@ import Arrow from "@/components/arrow";
 
 const details = ({ searchParams }) => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-neutral-900">
-      <div className="z-10 p-5 max-w-5xl w-full items-center justify-between font-sans text-sm bg-neutral-700 rounded-lg ">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-topo-img">
+      <div className="z-10 p-5 max-w-5xl w-full items-center justify-between font-sans text-sm bg-neutral-700/30 backdrop-blur-md rounded-lg ">
         <Link
           href={"/"}
           className="px-4 py-1 rounded-full inline-flex items-center justify-center hover:bg-neutral-600"
@@ -31,15 +31,27 @@ const details = ({ searchParams }) => {
           </div>
           <div className="col-span-2">
             <ul className="list-none pl-6">
-              {searchParams.Method.map((step, index) => (
-                <li key={index} className="mb-3 font-normal">
+              {Array.isArray(searchParams.Method) ? (
+                searchParams.Method.map((step, index) => (
+                  <li key={index} className="mb-3 font-normal">
+                    <div>
+                      <h1 className="font-semibold text-lg">
+                        Step {index + 1}
+                      </h1>
+                      <p className="text-base">{step}</p>
+                    </div>
+                  </li>
+                ))
+              ) : (
+                <li className="mb-3 font-normal">
                   <div>
-                    <h1 className="font-semibold text-lg">Step {index+1}</h1>
-                    {step}
+                    <h1 className="font-semibold text-lg">Step 1</h1>
+                    <p className="text-base">{searchParams.Method}</p>
                   </div>
                 </li>
-              ))}
+              )}
             </ul>
+            <h1 className="text-center font-bold text-xl">ENJOY!</h1>
           </div>
         </div>
       </div>

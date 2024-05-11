@@ -7,12 +7,12 @@ import Search from "@/components/search";
 
 export default async function Home({ searchParams }) {
   const pageParams = { page: 1, perPage: 30 };
-  const data = recipesData; 
+  const data = recipesData;
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-neutral-900">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-topo-img">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-sans text-sm">
-        <h1 className="text-4xl p-4 text-center">Recipe Finder</h1>
+        <h1 className="text-4xl p-4 text-center text-neutral-200">Recipe Finder</h1>
         <Search />
         <Suspense fallback={<Loading />}>
           <RecipeGrid

@@ -20,7 +20,7 @@ export default function Search({placeholder}) {
   return (
     <div className="flex items-center justify-center">
       <input
-        className="w-2/3 rounded-lg p-4 text-black"
+        className="w-2/3 rounded-lg p-4 text-neutral-800 bg-white/70 placeholder-black/50"
         type="text"
         placeholder="Enter Items"
         onChange={e => {

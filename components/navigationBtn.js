@@ -10,7 +10,7 @@ const NavBtn = ({ page, totalPages, goToPage }) => {
         <button
           className={`px-4 rounded-full text-white ${
             page === 1 ? "opacity-0" : ""
-          } hover:bg-neutral-600 duration-200`}
+          } hover:bg-neutral-600/50 duration-200`}
           disabled={page === 1}
           onClick={() => goToPage(page - 1)}
         >
@@ -22,7 +22,7 @@ const NavBtn = ({ page, totalPages, goToPage }) => {
         <button
           className={`px-4 rounded-full text-white ${
             page === totalPages ? "opacity-0" : ""
-          }hover:bg-neutral-600 duration-200`}
+          }hover:bg-neutral-600/50 duration-200`}
           disabled={page === totalPages}
           onClick={() => goToPage(page + 1)}
         >

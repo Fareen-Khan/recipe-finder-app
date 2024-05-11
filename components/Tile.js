@@ -26,7 +26,7 @@ const Tile = ({ recipe }) => {
           img_src: recipe.image_src,
         },
       }}
-      className="max-w-sm p-4 h-full rounded-lg shadow bg-neutral-700 hover:bg-neutral-800 hover:scale-105 duration-200"
+      className="max-w-sm p-4 h-full rounded-lg shadow bg-neutral-700/30 backdrop-blur-md hover:bg-neutral-800/30 hover:scale-105 duration-200"
     >
       <a href="#">
         <img className="w-full rounded-lg" src={image_src} alt={Name} />
