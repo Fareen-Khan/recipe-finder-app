@@ -2,7 +2,7 @@ import React from "react";
 
 export default function loading() {
   return (
-    <main className="flex flex-col h-screen items-center justify-center">
+    <main className="flex flex-col h-screen items-center justify-center bg-topo-img">
       <div role="status">
         <svg
           aria-hidden="true"
@@ -20,7 +20,6 @@ export default function loading() {
             fill="currentFill"
           />
         </svg>
-        <span class="sr-only">Loading...</span>
       </div>
     </main>
   );
