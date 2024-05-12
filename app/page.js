@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import RecipeGrid from "../components/RecipeGrid";
 import Loading from "./loading";
-import { promises as fs } from "fs";
 import recipesData from "../public/json/recipes.json";
 import Search from "@/components/search";
 

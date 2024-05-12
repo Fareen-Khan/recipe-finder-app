@@ -2,7 +2,7 @@
 import React from "react";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
-export default function Search({placeholder}) {
+export default function Search() {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();

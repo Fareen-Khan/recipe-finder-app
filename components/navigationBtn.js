@@ -8,7 +8,7 @@ const NavBtn = ({ page, totalPages, goToPage }) => {
     <>
       <div className="flex justify-center mt-4">
         <button
-          className={`px-4 rounded-full text-white ${
+          className={`px-4 rounded-full text-neutral-200 ${
             page === 1 ? "opacity-0" : ""
           } hover:bg-neutral-600/50 duration-200`}
           disabled={page === 1}
@@ -16,11 +16,11 @@ const NavBtn = ({ page, totalPages, goToPage }) => {
         >
           <Arrow isLeft={true} />
         </button>
-        <h2 className="px-2 text-base">
+        <h2 className="px-2 text-base text-neutral-200">
           Page {page} of {totalPages}
         </h2>
         <button
-          className={`px-4 rounded-full text-white ${
+          className={`px-4 rounded-full text-neutral-200 ${
             page === totalPages ? "opacity-0" : ""
           }hover:bg-neutral-600/50 duration-200`}
           disabled={page === totalPages}

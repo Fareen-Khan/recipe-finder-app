@@ -11,7 +11,7 @@ const details = ({ searchParams }) => {
       <div className="z-10 p-5 max-w-5xl w-full items-center justify-between font-sans text-sm bg-neutral-700/30 backdrop-blur-md rounded-lg ">
         <Link
           href={"/"}
-          className="px-4 py-1 rounded-full inline-flex items-center justify-center hover:bg-neutral-600"
+          className="px-4 py-1 rounded-full inline-flex items-center justify-center text-neutral-200 hover:bg-neutral-600"
         >
           <Arrow isLeft={true} />
         </Link>
@@ -35,23 +35,23 @@ const details = ({ searchParams }) => {
                 searchParams.Method.map((step, index) => (
                   <li key={index} className="mb-3 font-normal">
                     <div>
-                      <h1 className="font-semibold text-lg">
+                      <h1 className="font-semibold text-lg text-neutral-200">
                         Step {index + 1}
                       </h1>
-                      <p className="text-base">{step}</p>
+                      <p className="text-base text-neutral-200">{step}</p>
                     </div>
                   </li>
                 ))
               ) : (
                 <li className="mb-3 font-normal">
                   <div>
-                    <h1 className="font-semibold text-lg">Step 1</h1>
-                    <p className="text-base">{searchParams.Method}</p>
+                    <h1 className="font-semibold text-lg text-neutral-200">Step 1</h1>
+                    <p className="text-base text-neutral-200">{searchParams.Method}</p>
                   </div>
                 </li>
               )}
             </ul>
-            <h1 className="text-center font-bold text-xl">ENJOY!</h1>
+            <h1 className="text-center font-bold text-xl text-neutral-200">ENJOY!</h1>
           </div>
         </div>
       </div>
